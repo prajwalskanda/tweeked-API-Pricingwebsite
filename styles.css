@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#navbarSupportedContent {
+    margin-left: 150px;
+}
+
+.top-img {
+    height: 100px;
+    width: auto;
+}
+
+.nav-link {
+    color: whitesmoke;
+    margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: rgb(18, 26, 188);
+}
+
+@font-face {
+    font-family: inter;
+    src: url(Inter.ttf.otf);
+}
+
+@font-face {
+    font-family: inter-nav;
+    src: url(Inter-Light.ttf.otf);
+}
+
+.navb {
+    color: white;
+    font-family: inter;
+    font-size: 14px;
+    font-weight: 50;
+    line-height: 43px;
+    text-align: left;
+    background-color: #1e293b;
+    position: sticky;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.item {
+    margin-left: 300px;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"><path d="M3 6h24M3 12h24M3 18h24"/></svg>');
+}
+
+.container {
+    background-color: #0f172a;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 100vh;
+    /* Ensures the container fills the screen height */
+}
+
+.bottom {
+    background-color: #0f172a;
+}
+
+.card {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1e293b;
+    color: azure;
+    border-radius: 10px;
+    width: 950px;
+    margin-left: 90px;
+}
+
+@font-face {
+    font-family: inter;
+    src: url(Inter.ttf.otf);
+}
+
+.pricing-text {
+    margin-top: 40px;
+    /* Adjusted to 40px to give a bit more space from the card's top */
+    margin-bottom: 10px;
+    /* 10px space from the paragraph */
+    font-size: 2rem;
+    /* XL font size */
+    color: #6366f1;
+    /* Purple color for the heading */
+    text-align: left;
+    /* Center aligns the heading */
+    font-family: inter;
+}
+
+pricing-text+.pricing-text {
+    margin-top: 100px;
+    /* Removes any top margin from the paragraph */
+}
+
+@font-face {
+    font-family: para;
+    src: url(Inter-Medium.ttf.otf);
+}
+
+.pricing-text~.pricing-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* 10px space from the table */
+    color: white;
+    /* White color for the paragraph text */
+    text-align: center;
+    /* Center aligns the paragraph */
+    font-family: parainter;
+}
+
+.table-align {
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid;
+    color: white;
+    border-radius: 8px;
+}
+
+.table-align td {
+    border-color: #636;
+    border-bottom: 1px solid;
+    border-collapse: collapse;
+    border-right: none;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px solid;
+    /* Adds side borders to the table */
+}
+
+th {
+    padding: 10px;
+}
+
+.table-align th {
+    border-radius: 20px solid;
+    border-color: #6366f1;
+    background-color: #6366f1;
+    /* Light blue color for the table header */
+}
+
+.table-align td {
+    background-color: #1e293b;
+}
+
+.table-align td:first-child {
+    border-left: 0.5px solid #6366f1 !important;
+}
+
+.table-align td:last-child {
+    border-right: 0.5px solid #6366f1 !important;
+}
+
+@media (max-width: 768px) {
+    .table-align {
+        font-size: small;
+    }
+}
+
+.footer-content {
+    margin-top: 50px;
+}
+
+.footer-heading {
+    font-family: inter;
+    color: #6366f1;
+    font-size: x-large;
+}
+
+.footer-content-2 {
+    margin-top: 40px;
+    font-family: inter;
+    color: #6366f1;
+    font-size: x-large;
+}
+
+@font-face {
+    font-family: para;
+    src: url(Inter-Medium.ttf.otf);
+}
+
+.footer-para1 {
+    font-family: para;
+}
+
+.footer-para2 {
+    font-family: para;
+}
+
+
+/* .ltd{
+    border-right: 0.5px solid cyan !important;
+}
+.ftd{
+    border-left: 0.5px solid cyan !important;
+} */
+
+
+/* Dark Mode Styles (Default) */
+
+body.dark {
+    background-color: black;
+    color: whitesmoke;
+}
+
+body.light {
+    background-color: whitesmoke;
+    color: black;
+}
+
+body.light .navb {
+    background-color: #f8f9fa;
+}
+
+body.light .nav-link {
+    color: #333;
+}
+
+body.light .nav-link:hover {
+    color: #1a73e8;
+}
+
+body.light .container {
+    background-color: #f1f1f1;
+}
+
+body.light .card {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.light .footer-heading,
+body.light .pricing-text {
+    color: #1a73e8;
+}
+
+body.light .table-align th {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+body.light .table-align td {
+    background-color: #e2e2e2;
+    color: #333;
+}

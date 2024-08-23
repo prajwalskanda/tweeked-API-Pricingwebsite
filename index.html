@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+    <div class="navb">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">OVERVIEW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">AUTHENTICATION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">END POINTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TUTORIALS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CODE EXAMPLES</a>
+                    </li>
+                    <li class="nav-item contact-us">
+                        <a class="nav-link" href="#">PRICING</a>
+                    </li>
+                </ul>
+                <div class="toggle-container">
+                    <button id="theme-toggle" class="btn btn-primary">Toggle Light/Dark Mode</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="bottom">
+        <div class="container">
+            <div class="card">
+                <h1 class="pricing-text">API Pricing</h1>
+                <p class="pricing text">Our API pricing is based on the model used and the number of tokens processed. Here's a breakdown of the costs:</p>
+                <center>
+                    <table class="Table table-align">
+                        <thead>
+                            <tr style="border-radius: 10px;">
+                                <th>API</th>
+                                <th>MODEL</th>
+                                <th>PRICE PER 1K TOKENS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OpenAI</td>
+                                <td>GPT-3.5</td>
+                                <td>$0.002</td>
+                            </tr>
+                            <tr>
+                                <td>OpenAI</td>
+                                <td>GPT-3.5</td>
+                                <td>$0.002</td>
+                            </tr>
+                            <tr>
+                                <td>OpenAI</td>
+                                <td>GPT-4</td>
+                                <td>$0.03</td>
+                            </tr>
+                            <tr>
+                                <td>Together AI</td>
+                                <td>Llama-2-70b</td>
+                                <td>$0.0008</td>
+                            </tr>
+                            <tr>
+                                <td>Together AI</td>
+                                <td>Llama-2-13b</td>
+                                <td>$0.0006</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+
+
+                <div class="footer-content">
+                    <h3 class="footer-heading">Token Estimation</h3>
+                    <p class="footer-para1">On average, 1 token is approximately 4 characters or 0.75 words. For precise pricing, we recommend using our token calculator tool.</p>
+                    <h3 class="footer-content-2">Billing</h3>
+                    <p class="footer-para2">You will only be charged for the tokens used in generating the book. The API tracks token usage and bills accordingly. Detailed usage reports are available in your account dashboard</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const themeToggleBtn = document.getElementById("theme-toggle");
+            const body = document.body;
+
+            // Load saved theme from localStorage
+            const savedTheme = localStorage.getItem("theme") || "dark";
+            body.classList.add(savedTheme);
+
+            // Update the button text based on the saved theme
+            themeToggleBtn.textContent = savedTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+
+            themeToggleBtn.addEventListener("click", function() {
+                if (body.classList.contains("dark")) {
+                    body.classList.replace("dark", "light");
+                    themeToggleBtn.textContent = "Switch to Dark Mode";
+                    localStorage.setItem("theme", "light");
+                } else {
+                    body.classList.replace("light", "dark");
+                    themeToggleBtn.textContent = "Switch to Light Mode";
+                    localStorage.setItem("theme", "dark");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
